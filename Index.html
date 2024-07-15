@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Habit Tracker</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .habit-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .habit {
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .habit.completed {
+      background-color: #d4edda;
+      color: #155724;
+    }
+  </style>
+</head>
+<body>
+  <h1>Habit Tracker</h1>
+  
+  <div class="habit-container">
+    <div class="habit">Monday</div>
+    <div class="habit">Tuesday</div>
+    <div class="habit">Wednesday</div>
+    <div class="habit">Thursday</div>
+    <div class="habit">Friday</div>
+    <div class="habit">Saturday</div>
+    <div class="habit">Sunday</div>
+  </div>
+  
+  <script>
+    // Add your JavaScript code here
+    const habits = document.querySelectorAll('.habit');
+
+    habits.forEach(habit => {
+      habit.addEventListener('click', () => {
+        habit.classList.toggle('completed');
+      });
+    });
+  </script>
+</body>
+</html>
